@@ -39,6 +39,10 @@ public class DateAndTime {
         return future(atMost, unit, aBitLaterThanNow);
     }
 
+    public Date future(int atMost, String timeUnit){
+        return future(atMost, TimeUnit.valueOf(timeUnit));
+    }
+
     /**
      * Generates a future date from now, with a minimum time.
      *
